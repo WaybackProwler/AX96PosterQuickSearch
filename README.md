@@ -4,7 +4,7 @@ Credit to ShayGuy for creating the annotated version of Lum's poster.
 
 Credit to seigneurfuo for creating the first try at a searchable version.
 
-This version searches as you type, unlike seigneurfuo's version which requires you hit a button every time.
+This version searches as you type as opposed to having to hit the search button each time.
 
 A 10 gigapixel scan of Lum's poster is available here: https://archive.org/details/Anime_Expo_1996_Lionel_Kyosuke_Lum_Poster
 
