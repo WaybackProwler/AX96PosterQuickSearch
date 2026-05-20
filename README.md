@@ -2,7 +2,7 @@ Credit to Lionel 'Kyosuke' Lum for creating this poster in the first place for A
 
 Credit to ShayGuy for creating the annotated version of Lum's poster.
 
-Credit to seigneurfuo for creating the first try at a searchable version.
+Credit to seigneurfuo for creating the initial searchable version.
 
 This version searches as you type as opposed to having to hit the search button each time.
 
