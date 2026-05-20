@@ -11,6 +11,10 @@
   fill-opacity:0.5;
   stroke-opacity:0.9;
 }
+.char.search-hidden {
+  fill-opacity:0;
+  stroke-opacity:0;
+}
 </style>
 <title>Loads of Anime</title>
 <script>
@@ -121,6 +125,34 @@ function toggleSVG()
   svg.style.visibility = "visible" === v ? "hidden" : "visible";
 }
 
+function searchHighlight()
+{
+  var term = document.getElementById("searchInput").value.trim().toLowerCase();
+  var svg = document.getElementById("animesvg");
+  if (!svg) return;
+
+  var shapes = svg.childNodes;
+  for (var i = 0; i < shapes.length; i++) {
+    var shape = shapes[i];
+    if (!shape.getAttribute) continue;
+    var titleEl = shape.querySelector ? shape.querySelector("title") : null;
+    var label = titleEl ? titleEl.textContent.toLowerCase() : "";
+    
+    if (term && label.indexOf(term) === -1) {
+      shape.className.baseVal = "char search-hidden";
+    } else {
+      shape.className.baseVal = "char";
+    }
+  }
+
+  // Reset SVG visibility based on whether there's a search term
+  if (term) {
+    svg.style.visibility = "visible";
+  } else {
+    svg.style.visibility = "hidden";
+  }
+}
+
 window.onload = makeSVG;
 
 </script>
@@ -129,6 +161,7 @@ window.onload = makeSVG;
 <body>
 
 <button type="button" onclick="toggleSVG()">Highlight labeled characters</button>
+<input type="text" id="searchInput" placeholder="Search characters..." oninput="searchHighlight()" style="margin-left:8px;padding:3px 6px;font-size:14px;">
 
 <div id="container">
 <img src="img/loadsofanime.jpg" style="position:absolute;" usemap="#animemap"><!--<img src="./loadsofanime_files/loadsofanime.jpg" style="position:absolute;" usemap="#animemap">-->
