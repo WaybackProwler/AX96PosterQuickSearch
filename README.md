@@ -1,5 +1,7 @@
 Credit to Lionel 'Kyosuke' Lum for creating this poster in the first place for Anime Expo 1996.
+
 Credit to ShayGuy for creating the annotated version of Lum's poster.
+
 Credit to seigneurfuo for creating the first search function.
 
 This version searches as you type, unlike seigneurfuo's version which requires you hit a button every time.
